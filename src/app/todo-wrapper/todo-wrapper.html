@@ -1,0 +1,13 @@
+<p>todo-wrapper works!</p>
+<div class="container border border-danger mt-4 p-4 rounded">
+  <h2 class="text-center mb-4">To-Do App!</h2>
+
+  <app-todo-form (todoAdded)="addTodo($event)"></app-todo-form>
+
+  <app-todo-list
+    [todos]="todos"
+    (deleteTodo)="deleteTodo($event)"
+    (toggleComplete)="toggleComplete($event)">
+  </app-todo-list>
+
+</div>
